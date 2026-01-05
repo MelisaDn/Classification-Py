@@ -3,6 +3,10 @@ from Classification.Instance.Instance import Instance
 from Classification.InstanceList.InstanceList import InstanceList
 from Classification.Model.DecisionTree.DecisionTree import DecisionTree
 from Classification.Parameter.C45Parameter import C45Parameter
+from Classification.Attribute.ContinuousAttribute import ContinuousAttribute
+from Classification.Attribute.DiscreteAttribute import DiscreteAttribute
+from Classification.Attribute.DiscreteIndexedAttribute import DiscreteIndexedAttribute
+
 
 
 class PartModel(Model):
@@ -48,6 +52,29 @@ class PartModel(Model):
             if not rule.matches(instance):
                 newSet.add(instance)
         return newSet
+    
+    def _condition_to_string(self, condition):
+        attr = condition._DecisionCondition__attribute_index
+        value = condition._DecisionCondition__value
+        comp = condition._DecisionCondition__comparison
+
+        # Discrete attribute
+        if isinstance(value, DiscreteAttribute):
+            return f"att[{attr}] = {value.getValue()}"
+
+        # Discrete indexed attribute
+        if isinstance(value, DiscreteIndexedAttribute):
+            idx = value.getIndex()
+            if idx == -1:
+                return f"att[{attr}] = *"
+            return f"att[{attr}] = {idx}"
+
+        # Continuous attribute
+        if isinstance(value, ContinuousAttribute):
+            return f"att[{attr}] {comp} {value.getValue()}"
+
+        return "UNKNOWN_CONDITION"
+
 
     def train(self, trainSet: InstanceList, parameters=None):
 
@@ -88,3 +115,14 @@ class PartModel(Model):
 
     def loadModel(self, fileName: str):
         pass
+
+    def printRules(self):
+        for i, rule in enumerate(self.rules, 1):
+            if rule.conditions:
+                conds = " AND ".join(
+                    self._condition_to_string(c) for c in rule.conditions
+                )
+                print(f"Rule {i}: IF {conds} THEN class = {rule.label}")
+            else:
+                print(f"Rule {i}: IF TRUE THEN class = {rule.label}")
+
