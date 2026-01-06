@@ -47,16 +47,23 @@ def load_dataset_continuous(path):
 
 
 # run PART and choose the dataset loader based on the dataset
-dataset = "doctor-visits"
-trainSet = load_dataset_continuous(f"datasets/{dataset}.data")
+dataset = "chess"
+trainSet = load_dataset_discrete(f"datasets/{dataset}.data")
 print("Train size:", trainSet.size())
 
+train = InstanceList()
+test = InstanceList()
+
+for i in range(trainSet.size()):
+    if i % 5 == 0:      # 20%
+        test.add(trainSet.get(i))
+    else:               # 80%
+        train.add(trainSet.get(i))
+
 model = PartModel()
-model.train(trainSet)
+model.train(train)
 
-# Print and save the rules
-print("Number of rules:", len(model.rules))
-print("Accuracy:", model.test(trainSet).getAccuracy())
-model.printRules()
-model.saveRules(f"{dataset}_rules.txt")
-
+print("Train accuracy:", model.test(train).getAccuracy())
+print("Test accuracy:", model.test(test).getAccuracy())
+# model.printRules()
+model.saveRules(f"partRules/{dataset}_rules.txt")

@@ -1,0 +1,12 @@
+Rule 1: IF att[4] = x AND att[6] = b THEN class = positive
+Rule 2: IF att[4] = x AND att[6] = x AND att[2] = x THEN class = positive
+Rule 3: IF att[4] = x AND att[0] = x AND att[8] = x THEN class = positive
+Rule 4: IF att[4] = b AND att[6] = x THEN class = positive
+Rule 5: IF att[2] = x AND att[0] = x AND att[1] = x THEN class = positive
+Rule 6: IF att[4] = o AND att[6] = o THEN class = negative
+Rule 7: IF att[8] = x AND att[1] = x THEN class = negative
+Rule 8: IF att[8] = x THEN class = positive
+Rule 9: IF att[4] = o AND att[0] = o THEN class = negative
+Rule 10: IF att[4] = x AND att[2] = b THEN class = positive
+Rule 11: IF att[4] = o AND att[3] = x AND att[0] = x AND att[6] = x THEN class = positive
+Rule 12: IF TRUE THEN class = negative

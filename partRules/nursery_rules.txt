@@ -1,0 +1,67 @@
+Rule 1: IF att[7] = not_recom THEN class = not_recom
+Rule 2: IF att[1] = very_crit AND att[7] = priority THEN class = spec_prior
+Rule 3: IF att[1] = critical AND att[0] = great_pret AND att[7] = priority THEN class = spec_prior
+Rule 4: IF att[1] = proper AND att[0] = pretentious AND att[7] = priority THEN class = priority
+Rule 5: IF att[1] = proper AND att[0] = usual AND att[7] = priority THEN class = priority
+Rule 6: IF att[1] = critical AND att[0] = pretentious AND att[7] = priority THEN class = spec_prior
+Rule 7: IF att[1] = improper AND att[0] = usual AND att[7] = priority THEN class = priority
+Rule 8: IF att[1] = less_proper AND att[0] = pretentious AND att[7] = priority THEN class = priority
+Rule 9: IF att[1] = improper AND att[0] = great_pret AND att[7] = priority THEN class = spec_prior
+Rule 10: IF att[1] = less_proper AND att[0] = usual AND att[7] = priority THEN class = priority
+Rule 11: IF att[1] = critical AND att[4] = critical AND att[0] = pretentious THEN class = spec_prior
+Rule 12: IF att[1] = very_crit AND att[6] = problematic THEN class = spec_prior
+Rule 13: IF att[1] = proper AND att[0] = great_pret AND att[7] = recommended THEN class = priority
+Rule 14: IF att[0] = great_pret AND att[4] = convenient AND att[5] = convenient AND att[6] = slightly_prob THEN class = priority
+Rule 15: IF att[0] = pretentious AND att[1] = less_proper THEN class = priority
+Rule 16: IF att[0] = usual AND att[1] = less_proper AND att[6] = slightly_prob THEN class = priority
+Rule 17: IF att[0] = great_pret AND att[3] = 2 AND att[4] = convenient THEN class = priority
+Rule 18: IF att[0] = pretentious AND att[1] = proper AND att[6] = problematic THEN class = priority
+Rule 19: IF att[0] = usual AND att[1] = proper THEN class = priority
+Rule 20: IF att[0] = usual AND att[1] = critical AND att[7] = recommended AND att[6] = nonprob THEN class = priority
+Rule 21: IF att[0] = pretentious AND att[1] = improper AND att[7] = recommended AND att[6] = slightly_prob THEN class = priority
+Rule 22: IF att[0] = usual AND att[1] = improper AND att[6] = problematic THEN class = priority
+Rule 23: IF att[1] = less_proper AND att[0] = usual AND att[6] = problematic THEN class = priority
+Rule 24: IF att[4] = convenient AND att[5] = inconv AND att[3] = 1 THEN class = priority
+Rule 25: IF att[0] = great_pret AND att[1] = critical THEN class = spec_prior
+Rule 26: IF att[7] = priority AND att[4] = convenient AND att[5] = convenient THEN class = priority
+Rule 27: IF att[7] = priority AND att[3] = 3 THEN class = spec_prior
+Rule 28: IF att[1] = very_crit AND att[4] = critical THEN class = spec_prior
+Rule 29: IF att[6] = nonprob AND att[7] = recommended AND att[1] = improper AND att[0] = pretentious THEN class = priority
+Rule 30: IF att[6] = slightly_prob AND att[7] = recommended AND att[1] = critical AND att[0] = usual THEN class = priority
+Rule 31: IF att[1] = critical AND att[3] = more THEN class = spec_prior
+Rule 32: IF att[6] = nonprob AND att[7] = recommended AND att[1] = less_proper AND att[0] = great_pret THEN class = priority
+Rule 33: IF att[0] = great_pret AND att[3] = more AND att[7] = priority THEN class = spec_prior
+Rule 34: IF att[1] = less_proper AND att[0] = great_pret AND att[6] = slightly_prob AND att[7] = recommended THEN class = priority
+Rule 35: IF att[0] = usual AND att[1] = critical AND att[4] = critical THEN class = spec_prior
+Rule 36: IF att[0] = great_pret AND att[2] = foster AND att[4] = less_conv THEN class = spec_prior
+Rule 37: IF att[0] = pretentious AND att[1] = proper AND att[4] = critical THEN class = priority
+Rule 38: IF att[0] = great_pret AND att[4] = less_conv AND att[3] = 1 THEN class = priority
+Rule 39: IF att[0] = usual AND att[1] = improper AND att[4] = less_conv THEN class = priority
+Rule 40: IF att[0] = great_pret AND att[2] = incomplete THEN class = spec_prior
+Rule 41: IF att[1] = improper AND att[0] = usual AND att[4] = critical THEN class = priority
+Rule 42: IF att[1] = proper AND att[4] = less_conv THEN class = priority
+Rule 43: IF att[4] = critical AND att[0] = great_pret THEN class = spec_prior
+Rule 44: IF att[1] = improper AND att[0] = great_pret THEN class = spec_prior
+Rule 45: IF att[1] = critical AND att[2] = incomplete THEN class = spec_prior
+Rule 46: IF att[1] = very_crit AND att[3] = 1 THEN class = priority
+Rule 47: IF att[1] = very_crit AND att[5] = convenient AND att[4] = convenient THEN class = priority
+Rule 48: IF att[1] = very_crit AND att[3] = 3 THEN class = spec_prior
+Rule 49: IF att[1] = improper AND att[0] = pretentious AND att[3] = more THEN class = spec_prior
+Rule 50: IF att[1] = very_crit AND att[3] = more THEN class = spec_prior
+Rule 51: IF att[1] = critical AND att[2] = complete THEN class = priority
+Rule 52: IF att[1] = proper THEN class = very_recom
+Rule 53: IF att[0] = pretentious AND att[2] = foster THEN class = spec_prior
+Rule 54: IF att[0] = great_pret THEN class = priority
+Rule 55: IF att[1] = improper AND att[4] = convenient AND att[5] = inconv THEN class = priority
+Rule 56: IF att[1] = improper AND att[4] = critical THEN class = spec_prior
+Rule 57: IF att[1] = improper AND att[0] = usual THEN class = very_recom
+Rule 58: IF att[1] = very_crit THEN class = priority
+Rule 59: IF att[1] = less_proper AND att[4] = critical THEN class = priority
+Rule 60: IF att[1] = critical AND att[2] = foster THEN class = spec_prior
+Rule 61: IF att[1] = improper AND att[2] = complete THEN class = priority
+Rule 62: IF att[1] = critical AND att[0] = usual THEN class = priority
+Rule 63: IF att[1] = improper AND att[3] = 1 THEN class = priority
+Rule 64: IF att[1] = less_proper AND att[3] = 2 THEN class = very_recom
+Rule 65: IF att[1] = less_proper AND att[5] = convenient THEN class = very_recom
+Rule 66: IF att[1] = critical THEN class = spec_prior
+Rule 67: IF TRUE THEN class = priority

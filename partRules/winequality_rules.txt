@@ -1,0 +1,17 @@
+Rule 1: IF att[10] < 10.350000000000001 AND att[1] > 0.2375 AND att[1] < 0.5525 AND att[10] < 9.850000000000001 AND att[1] > 0.3025 AND att[9] < 0.575 THEN class = 5
+Rule 2: IF att[10] < 10.850000000000001 AND att[1] > 0.2375 AND att[10] < 10.350000000000001 AND att[1] > 0.5525 THEN class = 5
+Rule 3: IF att[10] < 10.99 AND att[1] > 0.2075 AND att[10] > 9.850000000000001 THEN class = 6
+Rule 4: IF att[10] > 10.11666666666665 AND att[10] > 11.61666666666665 AND att[5] > 21.5 AND att[3] > 1.725 AND att[4] < 0.094 AND att[2] < 0.735 THEN class = 7
+Rule 5: IF att[10] > 10.11666666666665 THEN class = 6
+Rule 6: IF att[1] > 0.20500000000000002 AND att[3] < 13.05 AND att[0] < 10.75 AND att[8] < 3.315 AND att[4] > 0.0505 THEN class = 5
+Rule 7: IF att[1] < 0.20500000000000002 AND att[10] > 9.05 THEN class = 6
+Rule 8: IF att[1] > 0.20500000000000002 AND att[0] > 6.85 AND att[3] < 13.05 THEN class = 6
+Rule 9: IF att[1] > 0.20500000000000002 AND att[0] < 6.85 AND att[8] < 3.385 AND att[1] < 0.275 AND att[6] > 132.0 AND att[3] > 7.95 AND att[10] < 9.649999999999999 THEN class = 5
+Rule 10: IF att[1] > 0.20500000000000002 AND att[1] < 0.2525 AND att[0] < 6.85 THEN class = 6
+Rule 11: IF att[1] < 0.265 AND att[5] > 37.5 THEN class = 6
+Rule 12: IF att[1] > 0.265 AND att[4] < 0.075 AND att[10] < 9.25 AND att[5] < 37.0 THEN class = 5
+Rule 13: IF att[1] > 0.21000000000000002 AND att[0] < 6.95 AND att[4] < 0.0745 AND att[5] < 44.5 AND att[10] < 9.55 THEN class = 6
+Rule 14: IF att[1] > 0.255 THEN class = 5
+Rule 15: IF att[8] < 3.045 AND att[0] > 6.75 THEN class = 7
+Rule 16: IF att[6] > 139.0 THEN class = 6
+Rule 17: IF TRUE THEN class = 5
