@@ -104,7 +104,7 @@ class PartModel(Model):
 
             currentSet = newSet
 
-                # Remove duplicate rules
+        # Remove duplicate rules
         unique = []
         seen = set()
 
@@ -142,3 +142,13 @@ class PartModel(Model):
             else:
                 print(f"Rule {i}: IF TRUE THEN class = {rule.label}")
 
+    def saveRules(self, filename):
+        with open(filename, "w", encoding="utf-8") as f:
+            for i, rule in enumerate(self.rules, 1):
+                if rule.conditions:
+                    conds = " AND ".join(
+                        self._condition_to_string(c) for c in rule.conditions
+                    )
+                    f.write(f"Rule {i}: IF {conds} THEN class = {rule.label}\n")
+                else:
+                    f.write(f"Rule {i}: IF TRUE THEN class = {rule.label}\n")
