@@ -104,6 +104,22 @@ class PartModel(Model):
 
             currentSet = newSet
 
+                # Remove duplicate rules
+        unique = []
+        seen = set()
+
+        for rule in self.rules:
+            key = (
+                tuple(self._condition_to_string(c) for c in rule.conditions),
+                rule.label
+            )
+            if key not in seen:
+                seen.add(key)
+                unique.append(rule)
+
+        self.rules = unique
+
+
     def predict(self, instance: Instance) -> str:
         for rule in self.rules:
             if rule.matches(instance):

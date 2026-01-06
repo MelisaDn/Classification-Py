@@ -2,7 +2,7 @@ from Classification.InstanceList.InstanceList import InstanceList
 from Classification.Instance.Instance import Instance
 from Classification.Model.RuleBased.PartModel import PartModel
 
-
+# Loading dataset
 def load_dataset_discrete(path):
     instance_list = InstanceList()
 
@@ -46,7 +46,7 @@ def load_dataset_continuous(path):
     return instance_list
 
 
-# ---- run PART on iris ----
+# run PART on dataset
 
 trainSet = load_dataset_discrete("datasets/car.data")
 print("Train size:", trainSet.size())
@@ -54,8 +54,18 @@ print("Train size:", trainSet.size())
 model = PartModel()
 model.train(trainSet)
 
-
+# Print and save the rules
 print("Number of rules:", len(model.rules))
 print("Accuracy:", model.test(trainSet).getAccuracy())
 model.printRules()
+
+with open("car_rules.txt", "w", encoding="utf-8") as f:
+    for i, rule in enumerate(model.rules, 1):
+        if rule.conditions:
+            conds = " AND ".join(
+                model._condition_to_string(c) for c in rule.conditions
+            )
+            f.write(f"Rule {i}: IF {conds} THEN class = {rule.label}\n")
+        else:
+            f.write(f"Rule {i}: IF TRUE THEN class = {rule.label}\n")
 
