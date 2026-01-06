@@ -75,6 +75,45 @@ class PartModel(Model):
 
         return "UNKNOWN_CONDITION"
 
+    def _collect_rules_from_tree(self, node, conditions, rules):
+        """
+        Collects all root-to-leaf paths as candidate rules.
+        """
+        if node.leaf:
+            label = node._DecisionNode__class_label
+            rules.append(self.Rule(list(conditions), label))
+            return
+
+        for child in node.children:
+            conditions.append(child._DecisionNode__condition)
+            self._collect_rules_from_tree(child, conditions, rules)
+            conditions.pop()
+
+    def _rule_coverage(self, rule, dataset: InstanceList):
+        count = 0
+        for i in range(dataset.size()):
+            if rule.matches(dataset.get(i)):
+                count += 1
+        return count
+
+    def _extract_best_rule_from_tree(self, root, dataset: InstanceList):
+        """
+        Extracts the rule (leaf) with maximum coverage,
+        exactly as described in PART.
+        """
+        candidate_rules = []
+        self._collect_rules_from_tree(root, [], candidate_rules)
+
+        best_rule = None
+        best_coverage = -1
+
+        for rule in candidate_rules:
+            coverage = self._rule_coverage(rule, dataset)
+            if coverage > best_coverage:
+                best_coverage = coverage
+                best_rule = rule
+
+        return best_rule
 
     def train(self, trainSet: InstanceList, parameters=None):
 
@@ -93,7 +132,10 @@ class PartModel(Model):
                 C45Parameter(seed=1, prune=True, crossValidationRatio=0.2)
             )
 
-            rule = self._extract_rule_from_tree(tree._DecisionTree__root)
+            rule = self._extract_best_rule_from_tree(
+                tree._DecisionTree__root,
+                currentSet
+            )
             self.rules.append(rule)
 
             newSet = self._remove_covered(currentSet, rule)

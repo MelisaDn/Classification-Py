@@ -1,0 +1,6 @@
+Rule 1: IF att[1] > 2.5 AND att[3] < 2.5 THEN class = L
+Rule 2: IF att[2] > 2.5 AND att[0] < 2.5 THEN class = R
+Rule 3: IF att[1] > 1.5 AND att[2] < 1.5 THEN class = L
+Rule 4: IF att[1] < 3.5 AND att[3] > 3.5 THEN class = R
+Rule 5: IF att[0] > 3.5 AND att[2] < 3.5 THEN class = L
+Rule 6: IF TRUE THEN class = R

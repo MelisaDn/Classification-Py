@@ -46,9 +46,9 @@ def load_dataset_continuous(path):
     return instance_list
 
 
-# run PART on dataset
-dataset = "car"
-trainSet = load_dataset_discrete(f"datasets/{dataset}.data")
+# run PART and choose the dataset loader based on the dataset
+dataset = "doctor-visits"
+trainSet = load_dataset_continuous(f"datasets/{dataset}.data")
 print("Train size:", trainSet.size())
 
 model = PartModel()

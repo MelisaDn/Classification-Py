@@ -1,46 +1,21 @@
-Rule 1: IF att[5] = med AND att[3] = more AND att[0] = low THEN class = acc
-Rule 2: IF att[5] = high AND att[3] = more AND att[0] = med AND att[1] = med THEN class = vgood
-Rule 3: IF att[5] = high AND att[3] = 4 AND att[0] = med AND att[1] = med THEN class = acc
-Rule 4: IF att[5] = high AND att[3] = more AND att[0] = low AND att[1] = med THEN class = vgood
-Rule 5: IF att[5] = high AND att[3] = 4 AND att[0] = med AND att[1] = vhigh THEN class = acc
-Rule 6: IF att[5] = med AND att[3] = 4 AND att[0] = low AND att[1] = med AND att[4] = big THEN class = good
-Rule 7: IF att[5] = med AND att[3] = more AND att[4] = med AND att[1] = high AND att[0] = high THEN class = acc
-Rule 8: IF att[5] = high AND att[3] = 4 AND att[0] = high AND att[1] = med THEN class = acc
-Rule 9: IF att[5] = med AND att[3] = 4 AND att[1] = high AND att[0] = low THEN class = acc
-Rule 10: IF att[5] = high AND att[3] = 4 AND att[0] = low AND att[1] = high THEN class = vgood
-Rule 11: IF att[5] = med AND att[3] = 4 AND att[0] = low THEN class = acc
-Rule 12: IF att[5] = high AND att[3] = more AND att[0] = med AND att[1] = vhigh THEN class = acc
-Rule 13: IF att[5] = high AND att[3] = 4 AND att[0] = low AND att[1] = low AND att[4] = big THEN class = vgood
-Rule 14: IF att[5] = med AND att[3] = 4 AND att[4] = big AND att[1] = low AND att[0] = med THEN class = good
-Rule 15: IF att[5] = high AND att[3] = more AND att[1] = high AND att[0] = low AND att[4] = med THEN class = vgood
-Rule 16: IF att[5] = high AND att[3] = 4 AND att[1] = low AND att[0] = med AND att[4] = big THEN class = vgood
-Rule 17: IF att[5] = high AND att[3] = 4 AND att[1] = vhigh AND att[0] = high THEN class = unacc
-Rule 18: IF att[5] = low THEN class = unacc
-Rule 19: IF att[3] = more AND att[1] = low AND att[0] = low AND att[4] = med THEN class = vgood
-Rule 20: IF att[3] = more AND att[1] = high AND att[0] = med AND att[4] = big THEN class = acc
-Rule 21: IF att[3] = 4 AND att[0] = high AND att[5] = med AND att[4] = big AND att[1] = low THEN class = acc
-Rule 22: IF att[3] = 4 AND att[0] = vhigh AND att[1] = low THEN class = acc
-Rule 23: IF att[3] = more AND att[1] = vhigh AND att[0] = vhigh THEN class = unacc
-Rule 24: IF att[3] = more AND att[1] = high AND att[0] = vhigh THEN class = unacc
-Rule 25: IF att[3] = 4 AND att[0] = low AND att[1] = med THEN class = good
-Rule 26: IF att[3] = more AND att[1] = vhigh AND att[0] = high THEN class = unacc
-Rule 27: IF att[3] = more AND att[4] = small AND att[2] = 3 AND att[5] = high THEN class = acc
-Rule 28: IF att[3] = more AND att[4] = med THEN class = acc
-Rule 29: IF att[3] = 4 AND att[0] = low THEN class = acc
-Rule 30: IF att[3] = 2 THEN class = unacc
-Rule 31: IF att[1] = med AND att[4] = big THEN class = acc
-Rule 32: IF att[0] = high AND att[5] = med AND att[4] = big AND att[1] = high THEN class = acc
-Rule 33: IF att[0] = med AND att[1] = low AND att[5] = high AND att[4] = med THEN class = vgood
-Rule 34: IF att[0] = vhigh AND att[1] = med AND att[5] = med THEN class = unacc
-Rule 35: IF att[0] = high AND att[5] = high AND att[2] = 5more THEN class = acc
-Rule 36: IF att[0] = high AND att[5] = med AND att[4] = med AND att[2] = 3 THEN class = unacc
-Rule 37: IF att[1] = med THEN class = acc
-Rule 38: IF att[0] = med AND att[1] = high AND att[5] = high THEN class = acc
-Rule 39: IF att[0] = vhigh THEN class = unacc
-Rule 40: IF att[4] = big AND att[0] = low AND att[1] = low THEN class = vgood
-Rule 41: IF att[4] = small AND att[5] = high AND att[2] = 4 AND att[0] = low THEN class = acc
-Rule 42: IF att[5] = med AND att[4] = small AND att[1] = vhigh THEN class = unacc
-Rule 43: IF att[4] = big AND att[1] = low AND att[0] = med AND att[5] = med THEN class = good
-Rule 44: IF att[4] = med THEN class = acc
-Rule 45: IF att[4] = small AND att[5] = med THEN class = unacc
-Rule 46: IF TRUE THEN class = acc
+Rule 1: IF att[5] = low THEN class = unacc
+Rule 2: IF att[3] = 2 THEN class = unacc
+Rule 3: IF att[0] = vhigh AND att[1] = vhigh THEN class = unacc
+Rule 4: IF att[0] = vhigh AND att[1] = high THEN class = unacc
+Rule 5: IF att[0] = high AND att[1] = vhigh THEN class = unacc
+Rule 6: IF att[4] = small AND att[5] = high THEN class = acc
+Rule 7: IF att[4] = med AND att[0] = vhigh THEN class = acc
+Rule 8: IF att[4] = med AND att[1] = high THEN class = acc
+Rule 9: IF att[4] = big AND att[0] = high THEN class = acc
+Rule 10: IF att[4] = small AND att[0] = low THEN class = acc
+Rule 11: IF att[4] = small AND att[0] = high THEN class = unacc
+Rule 12: IF att[5] = high AND att[0] = low THEN class = vgood
+Rule 13: IF att[4] = med THEN class = acc
+Rule 14: IF att[4] = small THEN class = unacc
+Rule 15: IF att[0] = vhigh THEN class = acc
+Rule 16: IF att[1] = vhigh THEN class = acc
+Rule 17: IF att[1] = high THEN class = acc
+Rule 18: IF att[5] = med AND att[1] = low THEN class = good
+Rule 19: IF att[5] = high THEN class = vgood
+Rule 20: IF att[0] = med THEN class = acc
+Rule 21: IF TRUE THEN class = good
