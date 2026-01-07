@@ -1,0 +1,2 @@
+Rule 1: IF att[6] > 0.1445 THEN class = 10
+Rule 2: IF TRUE THEN class = 7

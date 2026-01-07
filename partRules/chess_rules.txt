@@ -1,0 +1,27 @@
+Rule 1: IF att[5] = 4 AND att[1] = 1 THEN class = fourteen
+Rule 2: IF att[5] = 4 THEN class = thirteen
+Rule 3: IF att[5] = 7 AND att[1] = 2 THEN class = thirteen
+Rule 4: IF att[5] = 7 AND att[1] = 1 THEN class = fourteen
+Rule 5: IF att[5] = 6 AND att[1] = 1 THEN class = fourteen
+Rule 6: IF att[5] = 5 AND att[1] = 1 THEN class = fourteen
+Rule 7: IF att[5] = 5 THEN class = twelve
+Rule 8: IF att[5] = 8 THEN class = thirteen
+Rule 9: IF att[5] = 3 AND att[4] = h THEN class = eleven
+Rule 10: IF att[5] = 2 AND att[4] = f THEN class = draw
+Rule 11: IF att[5] = 1 AND att[4] = e THEN class = eight
+Rule 12: IF att[5] = 1 AND att[4] = g THEN class = nine
+Rule 13: IF att[5] = 3 THEN class = fourteen
+Rule 14: IF att[4] = f THEN class = twelve
+Rule 15: IF att[4] = e THEN class = ten
+Rule 16: IF att[4] = h THEN class = eight
+Rule 17: IF att[5] = 6 THEN class = twelve
+Rule 18: IF att[4] = a THEN class = five
+Rule 19: IF att[4] = c THEN class = eight
+Rule 20: IF att[4] = b THEN class = five
+Rule 21: IF att[3] = 6 THEN class = ten
+Rule 22: IF att[3] = 4 THEN class = ten
+Rule 23: IF att[2] = c THEN class = ten
+Rule 24: IF att[3] = 3 THEN class = draw
+Rule 25: IF att[1] = 1 AND att[2] = g THEN class = fourteen
+Rule 26: IF att[0] = b THEN class = twelve
+Rule 27: IF TRUE THEN class = eight

@@ -1,6 +1,6 @@
-Rule 1: IF att[20] > 0.5 AND att[14] < 0.5 THEN class = 1
+Rule 1: IF att[20] > 0.5 AND att[14] < 0.5 AND att[27] < 1.0 THEN class = 1
 Rule 2: IF att[32] > 1.5 THEN class = 3
-Rule 3: IF att[14] < 0.5 AND att[4] < 0.5 AND att[6] < 0.5 AND att[25] < 0.5 THEN class = 2
+Rule 3: IF att[14] < 0.5 AND att[6] < 0.5 AND att[4] < 0.5 THEN class = 2
 Rule 4: IF att[14] > 0.5 THEN class = 5
-Rule 5: IF att[6] < 0.5 THEN class = 4
+Rule 5: IF att[4] > 0.5 THEN class = 4
 Rule 6: IF TRUE THEN class = 6

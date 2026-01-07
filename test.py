@@ -47,8 +47,8 @@ def load_dataset_continuous(path):
 
 
 # run PART and choose the dataset loader based on the dataset
-dataset = "chess"
-trainSet = load_dataset_discrete(f"datasets/{dataset}.data")
+dataset = "winequality"
+trainSet = load_dataset_continuous(f"datasets/{dataset}.data")
 print("Train size:", trainSet.size())
 
 train = InstanceList()

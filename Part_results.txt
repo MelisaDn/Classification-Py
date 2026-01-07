@@ -1,0 +1,64 @@
+abalone:
+Train size: 4177
+Train accuracy: 0.20712361568392698
+Test accuracy: 0.22129186602870812
+
+balance:
+Train size: 625
+Train accuracy: 0.804
+Test accuracy: 0.528
+
+Bupa:
+Train size: 345
+Train accuracy: 0.644927536231884
+Test accuracy: 0.5797101449275363
+
+car:
+Train size: 1728
+Train accuracy: 0.9175108538350217
+Test accuracy: 0.9248554913294798
+
+dermatology:
+Train size: 366
+Train accuracy: 0.9623287671232876
+Test accuracy: 0.9459459459459459
+
+doctor-visits: 
+Train size: 714
+Train accuracy: 0.5411558669001751
+Test accuracy: 0.4405594405594406
+
+iris:
+Train size: 150
+Train accuracy: 0.9583333333333334
+Test accuracy: 0.9666666666666667
+
+maternal:
+Train size: 1014
+Train accuracy: 0.7805178791615289
+Test accuracy: 0.6995073891625616
+
+nursery:
+Train size: 12960
+Train accuracy: 0.9459876543209876
+Test accuracy: 0.9440586419753086
+
+poker:
+Train size: 25010
+Train accuracy: 0.4997001199520192
+Test accuracy: 0.4988004798080768
+
+tae:
+Train size: 151
+Train accuracy: 0.5666666666666667
+Test accuracy: 0.5161290322580645
+
+tic tac toe:
+Train size: 958
+Train accuracy: 0.8133159268929504
+Test accuracy: 0.8125
+
+winequality:
+Train size: 6497
+Train accuracy: 0.5709062920915913
+Test accuracy: 0.5607692307692308

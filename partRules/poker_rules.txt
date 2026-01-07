@@ -1,2 +1,1 @@
-Rule 1: IF att[7] < 10.5 THEN class = 0
-Rule 2: IF TRUE THEN class = 0
+Rule 1: IF TRUE THEN class = 0

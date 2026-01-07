@@ -1,6 +1,2 @@
 Rule 1: IF att[4] > 20.5 THEN class = 2
-Rule 2: IF att[2] > 24.5 THEN class = 1
-Rule 3: IF att[2] < 19.5 AND att[1] < 61.5 THEN class = 2
-Rule 4: IF att[4] > 7.5 AND att[2] > 19.5 AND att[0] > 85.0 THEN class = 1
-Rule 5: IF att[3] > 14.0 AND att[4] > 7.5 THEN class = 2
-Rule 6: IF TRUE THEN class = 1
+Rule 2: IF TRUE THEN class = 1

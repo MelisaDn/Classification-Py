@@ -1,0 +1,9 @@
+Rule 1: IF att[0] = b THEN class = win
+Rule 2: IF att[0] = o THEN class = win
+Rule 3: IF att[18] = b THEN class = win
+Rule 4: IF att[18] = x AND att[19] = b THEN class = win
+Rule 5: IF att[6] = o AND att[20] = b THEN class = win
+Rule 6: IF att[19] = o THEN class = loss
+Rule 7: IF att[20] = o THEN class = loss
+Rule 8: IF att[19] = b THEN class = loss
+Rule 9: IF TRUE THEN class = win
