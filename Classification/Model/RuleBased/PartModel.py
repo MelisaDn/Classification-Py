@@ -98,8 +98,7 @@ class PartModel(Model):
 
     def _extract_best_rule_from_tree(self, root, dataset: InstanceList):
         """
-        Extracts the rule (leaf) with maximum coverage,
-        exactly as described in PART.
+        Extracts the rule (leaf) with maximum coverage.
         """
         candidate_rules = []
         self._collect_rules_from_tree(root, [], candidate_rules)
